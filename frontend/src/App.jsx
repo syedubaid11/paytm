@@ -1,4 +1,5 @@
 import Signup from "./pages/signup"
+import Signin from "./pages/signup"
 import {BrowserRouter,
 Route,
 Routes}
@@ -11,8 +12,7 @@ function App() {
         <BrowserRouter>
         <Routes>
           <Route path="/signup" element={<Signup/>}/>
-          
-
+          <Route path="/signin" element={<Signin/>}/>
         </Routes>
         </BrowserRouter>
     </div>
