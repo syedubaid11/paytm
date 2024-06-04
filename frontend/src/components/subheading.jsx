@@ -1,6 +1,6 @@
 export default function Subheading({label}){
     return(
-        <div className="subheading-signup">
+        <div className="font-light text-sm pt-6">
             {label}
         </div>
     )
