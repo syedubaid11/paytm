@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Heading from "../components/heading";
 import InputBox from "../components/input";
 import Subheading from "../components/subheading";
+import { BottomWarning } from "../components/bottomwarning";
 
 export default function Signup(){
     const[firstName,setfirstName]=useState('')
@@ -29,8 +30,17 @@ export default function Signup(){
                 setPassword(e.target.value)
             }} label={"Enter your Password"}placeholder={"Password"} />
         
-            <button type="button" className="m-3 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign Up</button>
+            <button onClick={
+                axios.post("https://localhost:3000/api/v1/user/signup",{
+                    username:username,
+                    firstName:firstName,
+                    lastName:lastName,
+                    password:password
+                })
+            }type="button" className="m-3 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign Up</button>
+            <BottomWarning label={"Already have an account?"} buttonText={"Sign in"} to={"/signin"} />
         </div>
+
         
         
         </div>

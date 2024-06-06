@@ -1,6 +1,6 @@
 import Dashboard from "./pages/dashboard"
 import Signup from "./pages/signup"
-import Signin from "./pages/signup"
+import Signin from "./pages/signin"
 import {BrowserRouter,
 Route,
 Routes}
